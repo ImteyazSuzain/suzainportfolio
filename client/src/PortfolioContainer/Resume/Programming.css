@@ -1,0 +1,17 @@
+.grid {
+	background-color: antiquewhite;
+	border-color: aqua;
+	border: none;
+}
+.site-card-border-less-wrapper {
+	justify-content: space-between;
+}
+.percent {
+	display: none;
+}
+
+@media only screen and (max-width: 480px) {
+	.container-fluid {
+		margin-top: 10px;
+	}
+}

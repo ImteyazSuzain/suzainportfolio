@@ -1,0 +1,16 @@
+@media screen and (max-width: 420px) {
+	.tab {
+		flex-direction: column;
+	}
+}
+
+.tab {
+	flex-direction: column;
+
+	min-height: fit-content;
+	margin-top: 120px;
+}
+.heading {
+	text-align: center;
+	color: rgb(219, 106, 14);
+}
