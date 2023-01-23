@@ -21,7 +21,7 @@ function Programming() {
 				<Card
 					className="site-card-border-less-wrapper"
 					title="Programming "
-					bordered={false}
+					bordered={1}
 				>
 					<Card.Grid className="grid" bordered={false} style={gridStyle}>
 						<p>
