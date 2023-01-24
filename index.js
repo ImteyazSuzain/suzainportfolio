@@ -21,12 +21,12 @@ app.post("/contact", async (req, res) => {
 		success: "Email sent to Suzain Imteyaz",
 	});
 });
-/*if (process.env.NODE_ENV === "production") {
+if (process.env.NODE_ENV === "production") {
 	app.use(express.static("client/build"));
 	app.get("*", (req, res) =>
 		res.sendFile(path.resolve(__dirname, "client", "build", "index.html"))
 	);
-}*/
+}
 
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, console.log(`server listing to port 5000 only`));
