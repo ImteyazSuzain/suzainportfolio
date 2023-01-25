@@ -9,11 +9,11 @@ const contactRoute = require("./route/contactRoute");
 app.use(express.json());
 app.use(
 	cors({
-		origin: ["https://suzainclient.vercel.app/"],
+		origin: ["https://suzainclient.vercel.app"],
 	})
 );
 
-app.post("/contact", async (req, res) => {
+app.post('/contact', async (req, res) => {
 	const { name, email, summary } = req.body;
      console.log("trying");
 	await contactRoute(email, summary, name);
@@ -29,4 +29,4 @@ if (process.env.NODE_ENV === "production") {
 }
 
 const PORT = process.env.PORT || 8080;
-app.listen(PORT, console.log(`server listing to port 5000 only`));
+app.listen(PORT, console.log(`server listing to port ${PORT} only`));
