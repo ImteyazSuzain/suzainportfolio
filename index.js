@@ -15,7 +15,7 @@ app.use(
 
 app.post("/contact", async (req, res) => {
 	const { name, email, summary } = req.body;
-
+     console.log("trying");
 	await contactRoute(email, summary, name);
 	res.json({
 		success: "Email sent to Suzain Imteyaz",
