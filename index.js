@@ -24,7 +24,7 @@ app.post("/contact", async (req, res) => {
 if (process.env.NODE_ENV === "production") {
 	
 	app.all("*", (req, res) =>
-		res.sendFile(path.join(__dirname, "views","404.html"))
+		res.sendFile(path.join(__dirname, 'views','404.html'))
 	);
 }
 
