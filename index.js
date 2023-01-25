@@ -21,10 +21,11 @@ app.post('/contact', async (req, res) => {
 		success: "Email sent to Suzain Imteyaz",
 	});
 });
+
 if (process.env.NODE_ENV === "production") {
 	
-	app.all("*", (req, res) =>
-		res.sendFile(path.join(__dirname, 'views','404.html'))
+	app.get("*", (req, res) =>
+		res.sendFile(path.join(__dirname, './views','index.html'))
 	);
 }
 
