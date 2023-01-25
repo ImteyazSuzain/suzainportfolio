@@ -9,24 +9,25 @@ const contactRoute = require("./route/contactRoute");
 app.use(express.json());
 app.use(
 	cors({
-		origin: ["http://localhost:3001"],
+		origin: ["https://suzainclient.vercel.app"],
 	})
 );
 
-app.post("/contact", async (req, res) => {
+app.post('/contact', async (req, res) => {
 	const { name, email, summary } = req.body;
-
+     console.log("trying");
 	await contactRoute(email, summary, name);
 	res.json({
 		success: "Email sent to Suzain Imteyaz",
 	});
 });
+
 if (process.env.NODE_ENV === "production") {
-	app.use(express.static("client/build"));
+	
 	app.get("*", (req, res) =>
-		res.sendFile(path.resolve(__dirname, "client", "build", "index.html"))
+		res.sendFile(path.join(__dirname, './views','index.html'))
 	);
 }
 
 const PORT = process.env.PORT || 8080;
-app.listen(PORT, console.log(`server listing to port 5000 only`));
+app.listen(PORT, console.log(`server listing to port ${PORT} only`));
